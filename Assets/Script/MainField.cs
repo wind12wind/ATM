@@ -8,7 +8,7 @@ public class MainField: MonoBehaviour
     public Text depositText;
     public Text balanceText;
     private int balance = 1000000; // 초기 잔액
-
+    private int deposit = 10000;   // 초기 현금
     private void Start()
     {
         UpdateUI();
@@ -27,10 +27,18 @@ public class MainField: MonoBehaviour
     private void UpdateUI()
     {
         nameText.text = " "; // 사용자 이름을 여기서 가져오거나 설정
-        depositText.text = "예금: $" + balance.ToString();
+        depositText.text = "예금: $" + deposit.ToString();
         balanceText.text = "소지금: $" + balance.ToString();
     }
 
+    public int Getdeposit()
+    {
+        return deposit;
+    }
+    public void Setdeposit(int newDeposit)
+    {
+        balance = newDeposit;
+    }
     public int GetBalance()
     {
         return balance;
