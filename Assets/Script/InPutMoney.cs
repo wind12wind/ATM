@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class InPutMoney : MonoBehaviour
 {
-    public GameObject depositScreen;
+    public GameObject InPutMoneyScreen;
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Button>().onClick.AddListener(OnDepositButtonClick);
+        GetComponent<Button>().onClick.AddListener(InPutMoneyButtonClick);
     }
 
     // Update is called once per frame
-    void OnDepositButtonClick()
+    public void InPutMoneyButtonClick()
     {
-        depositScreen.SetActive(true);
+        InPutMoneyScreen.SetActive(true);
     }
 }
